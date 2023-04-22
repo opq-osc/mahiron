@@ -6,3 +6,4 @@ python_dateutil
 httpx
 pillow
 qrcode
+pil-utils

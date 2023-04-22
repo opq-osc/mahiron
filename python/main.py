@@ -10,6 +10,7 @@ from plugins.opqqq_plugins_mahiro.src.bot_sign_in import bot_sign_in
 from plugins.opqqq_plugins_mahiro.src.bot_throw_creep import bot_throw_creep
 from plugins.opqqq_plugins_mahiro.src.bot_vtuber_fortune import bot_vtuber_fortune
 from plugins.opqqq_plugins_mahiro.src.bot_pcr_fortune import bot_pcr_fortune
+from plugins.memes.memes import memes
 
 # load plugins
 mahiro.container.add_group(id="牛了个牛", callback=chinchin_pk)
@@ -19,6 +20,7 @@ mahiro.container.add_group(id="签到", callback=bot_sign_in)
 mahiro.container.add_group(id="丢和爬", callback=bot_throw_creep)
 mahiro.container.add_group(id="运势holo版", callback=bot_vtuber_fortune)
 mahiro.container.add_group(id="运势pcr版", callback=bot_pcr_fortune)
+mahiro.container.add_group(id="meme", callback=memes)
 
 # load firend plugin
 # from plugins.friend_simple_mahiro.main import friend_simple_mahiro

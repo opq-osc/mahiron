@@ -14,7 +14,7 @@
   "devDependencies": {
     "@types/node": "^18.15.13",
     "@xn-sakina/mental": "^4.0.2",
-    "mahiro": "^7.0.0",
+    "mahiro": "^7.1.0",
     "typescript": "^5.0.4"
   }
 }
