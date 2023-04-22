@@ -37,6 +37,19 @@
   pip install -r requirements.txt
 ```
 
+### 填写信息
+
+在根目录创建 `.account.json` 并填写服务信息：
+
+```json
+{
+  "host": "127.0.0.1",
+  "account": 123456789
+}
+```
+
+如需定制更多启动参数，请修改 [`index.ts`](./index.ts) 。
+
 #### 启动
 
 ```bash
@@ -47,7 +60,7 @@
   python ./python/main.py
 ```
 
-更多信息详见 [Mahiro 文档](https://mahiro.opqbot.com/) 。
+如需进一步定制，更多信息详见 [Mahiro 文档](https://mahiro.opqbot.com/) 。
 
 ### License
 
