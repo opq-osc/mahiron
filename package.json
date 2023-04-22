@@ -1,0 +1,20 @@
+{
+  "name": "mahiron",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "mahiro ./index.ts"
+  },
+  "engines": {
+    "node": ">=16",
+    "pnpm": "^8",
+    "yarn": "not use, use pnpm instead",
+    "npm": "not use, use pnpm instead"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.13",
+    "@xn-sakina/mental": "^4.0.2",
+    "mahiro": "^7.0.0",
+    "typescript": "^5.0.4"
+  }
+}

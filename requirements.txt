@@ -1,0 +1,8 @@
+mahiro>=1.5.0
+arrow
+dbutils
+ujson
+python_dateutil
+httpx
+pillow
+qrcode
