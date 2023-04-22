@@ -4,18 +4,14 @@
 
 ### Features
 
+目前支持如下功能，更多功能正在迁移中：
+
  - 牛了个牛
-
  - 早晚安
-
  - 表情包
-
  - 签到
-
  - 丢和爬
-
  - 运势holo版
-
  - 运势pcr版
 
 > 所有 Python 源码出处可参考 `python/plugins/*/info.json` 文件。
@@ -37,7 +33,7 @@
   pip install -r requirements.txt
 ```
 
-### 填写信息
+#### 填写信息
 
 在根目录创建 `.account.json` 并填写服务信息：
 
