@@ -13,6 +13,7 @@
  - 丢和爬
  - 运势holo版
  - 运势pcr版
+ - meme （喜悲报）
 
 > 所有 Python 源码出处可参考 `python/plugins/*/info.json` 文件。
 
