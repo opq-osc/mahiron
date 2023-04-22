@@ -26,6 +26,7 @@ async def memes(mahiro: GroupMessageMahiro):
     if not is_text:
         return
     
+    output = None
     msg = mahiro.ctx.msg.Content.strip()
     if msg.startswith(good_news_prefix):
         text = msg.replace(good_news_prefix, '')
