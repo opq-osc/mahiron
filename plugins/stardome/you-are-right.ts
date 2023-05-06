@@ -25,7 +25,7 @@ const data: string[] = [
 ]
 
 const match = ['?', '？', '吗', '吧', '对', '是的', '嗯']
-const minLength = 10
+const minLength = 8
 
 const key = `stardome-you-are-right-v1`
 
@@ -72,7 +72,7 @@ export const StardomeYouAreRight = () => {
       await mahiro.sendGroupMessage({
         groupId: ctx.groupId,
         msg: {
-          Content: reply,
+          Content: `你说的对，但${reply}`,
         },
       })
       // pending 5s
