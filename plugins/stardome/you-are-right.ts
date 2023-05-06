@@ -79,7 +79,7 @@ export const StardomeYouAreRight = () => {
       pending = true
       setTimeout(() => {
         pending = false
-      }, 5000)
+      }, 60 * 1000)
     })
   }
   return use
