@@ -47,6 +47,9 @@ export const Bangumi = () => {
       const buffer = await nodeHtmlToImage({
         html: readFileSync(htmlPath, 'utf-8').replace('{{bangumi}}', JSON.stringify(value)),
         output: outputPath,
+        puppeteerArgs: {
+          args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        }
       })
       logger.info(`bangumi: render over for ${day}`)
       return buffer
