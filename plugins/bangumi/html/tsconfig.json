@@ -1,0 +1,10 @@
+{
+  "extends": "@xn-sakina/mental/project",
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
