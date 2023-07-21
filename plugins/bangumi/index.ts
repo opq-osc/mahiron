@@ -5,7 +5,6 @@ import { existsSync, readFileSync, statSync } from 'fs'
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 const avaliableGroups = new Set<number>()
-let pending = false
 
 export const Bangumi = () => {
   const mark2cron = {
@@ -64,7 +63,6 @@ export const Bangumi = () => {
       }
 
       try {
-        logger.info(`bangumi: render for ${day}`)
         const buffer = await render(day)
         if (!buffer || !existsSync(outputPath)) {
           logger.error(`bangumi: render failed for ${day}`)
@@ -95,19 +93,13 @@ export const Bangumi = () => {
 
       // trigger immediately
       if (msg?.Content === '今日番剧') {
-        if (pending) {
-          logger.info(`bangumi: set cd for ${groupId}`)
-          return
-        }
-        pending = true
-        // 10 minutes later, reset pending
-        setTimeout(() => {
-          logger.info(`bangumi: reset cd for ${groupId}`)
-          pending = false
-        }, 10 * 60 * 1000)
         logger.info(`bangumi: trigger for ${groupId}`)
         const mark = dayjs().format('ddd').toLowerCase()
-        task(mark, groupId)
+        try {
+          task(mark, groupId)
+        } catch (e) {
+          logger.error(`bangumi: run task failed for ${groupId}`, e)
+        }
       }
     })
 
@@ -115,9 +107,13 @@ export const Bangumi = () => {
       // register cron
       logger.info(`bangumi: register cron job for ${day}`)
       const cron = (mark2cron as any)[day]
-      mahiro.cron.registerCronJob(cron, () => {
+      mahiro.cron.registerCronJob(cron, async () => {
         logger.info(`bangumi: trigger cron job for ${day}`)
-        task(day)
+        try {
+          task(day)
+        } catch (e) {
+          logger.error(`bangumi: run cron task failed for ${day}`, e)
+        }
       })
     })
   }
