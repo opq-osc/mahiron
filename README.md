@@ -1,10 +1,18 @@
 # Mahiron
 
-一个 [Mahiro](https://github.com/opq-osc/mahiro) 的实例。
+<div align="center">
+
+### ❗️EOL
+
+项目可正常运作，但不再提供维护，如有自定义需求可 fork 使用
+
+</div>
+
+一个 [Mahiro](https://github.com/opq-osc/mahiro) 的实践例子，包含 JavaScript 插件、Python 插件在同一项目里运行。
 
 ### Features
 
-目前支持如下功能，更多功能正在迁移中：
+支持如下功能：
 
  - 牛了个牛
  - 早晚安
